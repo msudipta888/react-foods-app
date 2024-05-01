@@ -1,0 +1,139 @@
+
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.logo {
+    width: 120px; 
+    height: 120px;
+    background-size: contain;
+    border-radius: 48%; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Added a more pronounced box shadow for depth */
+    transition: transform 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95), box-shadow 0.5s ease; /* Added smooth transitions */
+    transform-style: preserve-3d; /* Ensures proper 3D transformation */
+    perspective: 1000px; /* Added perspective for 3D effect */
+    overflow: hidden; /* Hide any overflow content */
+}
+
+.logo:hover {
+    transform: rotateY(30deg) rotateX(15deg) scale(0.9); /* Added 3D rotation and scaling on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Increased box shadow on hover for emphasis */
+}
+
+/* Optional: Add a border for additional style */
+.logo::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Adjust color and opacity as needed */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+
+.navmenu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: darkgoldenrod;
+    font-size: 18px;
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navbar button{
+    background:transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navbar button:hover{
+    background-color: lightcoral;
+}
+.navbar .active{
+    border-bottom: 2px solid lightslategray;
+    padding-bottom: 1.5px;
+}
+li{
+    cursor: pointer;
+}
+.navbar-right .navabar-search-icon{
+    position: relative;
+}
+.navbar-right .navabar-search-icon .dot{
+    position: absolute;
+    max-width: 10px;
+    min-height: 10ox;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -20px;
+    right: -8px;
+}
+.navabar-search-icon .dot{
+    height: 22%;
+    width: 27%;
+    background-color: tomato;
+    margin-top: 13px;
+   margin-right: 8px;
+}
+@media (max-width:2000px)
+{
+    .navbar .logo{
+        width: 85px;
+    }
+}
+@media (max-width:1050px){
+    .navbar .logo{
+        width: 70px;
+    }
+    .navmenu{
+        gap:20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 22px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+@media (max-width:900px){
+    .navbar .logo{
+        width: 60px;
+    }
+    .navmenu{
+        gap:15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 18px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 6px 20px;
+    }
+}
+@media (max-width:750px){
+    .navmenu{
+       display: none;
+}
+
+}
